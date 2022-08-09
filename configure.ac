@@ -867,6 +867,28 @@ esac
 
 #----------------------------------------------------------------------
 
+AC_MSG_CHECKING(whether sqmail-ext is enabled)
+AC_ARG_ENABLE(sqmail-ext,
+        [  --enable-qmail-ext         Enable sqmail email address extension support.],
+        SQMAIL_EXT=$enableval,
+                [
+                        SQMAIL_EXT=n
+                ]
+)
+
+case $SQMAIL_EXT in
+  1*|y*|Y*)
+        AC_MSG_RESULT(yes)
+        SQMAIL_EXT=1
+        AC_DEFINE_UNQUOTED(SQMAIL_EXT,$SQMAIL_EXT,"")
+        ;;
+  *)
+        AC_MSG_RESULT(no)
+        ;;
+esac
+
+#----------------------------------------------------------------------
+
 AC_MSG_CHECKING(whether ip-alias-domains is enabled)
 AC_ARG_ENABLE(ip-alias-domains,
         [  --enable-ip-alias-domains  Enable mapping of default domain via reverse ip lookup table.],

@@ -859,6 +859,7 @@ void deliver_mail(char *address, char *quota) {
         dtline = NULL;
       } else {
         dtline += 14; /* skip "Delivered-To: " */
+#ifndef SQMAIL_EXT
         dtlen -= 14;
         atpos = strchr(dtline, '@');
         /* ex: dtline = "x-y-z.com-fred@x-y-z.com\n"
@@ -869,6 +870,7 @@ void deliver_mail(char *address, char *quota) {
         if (atpos != NULL) {
           dtline += (dtlen - (atpos - dtline) - 1);
         }
+#endif
       }
     }
     if (dtline == NULL) {
@@ -1055,11 +1057,13 @@ int is_looping(char *address) {
   }
   if (*address == '&') ++address;
 
+#ifndef SQMAIL_EXT
   /* check the DTLINE */
   dtline = getenv("DTLINE");
   if (dtline != NULL && is_loop_match(dtline, address) == 1) {
     return (1);
   }
+#endif
 
 #ifdef MAKE_SEEKABLE
   if (!Seekable(0)) MakeSeekable(stdin);

@@ -869,7 +869,7 @@ esac
 
 AC_MSG_CHECKING(whether sqmail-ext is enabled)
 AC_ARG_ENABLE(sqmail-ext,
-        [  --enable-qmail-ext         Enable sqmail email address extension support.],
+        [  --enable-sqmail-ext         Enable sqmail email address extension support.],
         SQMAIL_EXT=$enableval,
                 [
                         SQMAIL_EXT=n

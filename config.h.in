@@ -1,10 +1,13 @@
-/* config.h.in.  Generated from configure.in by autoheader.  */
+/* config.h.in.  Generated from configure.ac by autoheader.  */
 
 /* "" */
 #undef CLEAR_PASS
 
 /* Define to 1 if the `closedir' function returns void instead of `int'. */
 #undef CLOSEDIR_VOID
+
+/* "" */
+#undef DEFAULT_DELIVERY
 
 /* "" */
 #undef DOMAINS_DIR
@@ -19,6 +22,12 @@
 #undef ENABLE_LEARN_PASSWORDS
 
 /* "" */
+#undef ENABLE_LOGGER_SQLITE
+
+/* "" */
+#undef ENABLE_LOGGER_SYSLOG
+
+/* "" */
 #undef ENABLE_LOGGING
 
 /* "" */
@@ -26,6 +35,12 @@
 
 /* "" */
 #undef ENABLE_PASSWD
+
+/* "" */
+#undef ENABLE_SPAM_JUNKFOLDER
+
+/* "" */
+#undef ENABLE_SPAM_THRESHOLD
 
 /* "" */
 #undef ENABLE_SQL_LOGGING
@@ -240,11 +255,20 @@
 /* "" */
 #undef MD5_PASSWORDS
 
+/* Minimum password length */
+#undef MIN_PW_CLEAR_PASSWD
+
+/* "" */
+#undef MYSQLBIN
+
 /* "" */
 #undef MYSQL_REPLICATION
 
 /* "" */
 #undef ONCHANGE_SCRIPT
+
+/* "" */
+#undef ONCHANGE_SCRIPT_BEFORE_AND_AFTER
 
 /* "" */
 #undef OPEN_SMTP_CUR_FILE
@@ -307,10 +331,19 @@
 #undef RETSIGTYPE
 
 /* "" */
+#undef SHA512_PASSWORDS
+
+/* "" */
 #undef SPAMASSASSIN
 
 /* "" */
 #undef SPAMC_PROG
+
+/* "" */
+#undef SQL_ALIASDOMAINS
+
+/* "" */
+#undef SQMAIL_EXT
 
 /* "" */
 #undef SQWEBMAIL_PASS
@@ -323,6 +356,9 @@
 
 /* "" */
 #undef TCP_FILE
+
+/* "" */
+#undef TINYCDB
 
 /* Define to 1 if your <sys/time.h> declares `struct tm'. */
 #undef TM_IN_SYS_TIME
@@ -347,6 +383,9 @@
 
 /* "" */
 #undef USE_SQL
+
+/* "" */
+#undef USE_SQLITE
 
 /* "" */
 #undef USE_SYBASE

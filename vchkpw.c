@@ -42,7 +42,11 @@ static char hextab[] = "0123456789abcdef";
 #endif
 
 /* Definitions */
+#ifndef SQMAIL_EXT
 #define VCHKPW_USER "USER="
+#else
+#define VCHKPW_USER "AUTHUSER="
+#endif
 #define VCHKPW_HOME "HOME="
 #define VCHKPW_SHELL "SHELL=NOLOGIN"
 #define VCHKPW_VPOPUSER "VPOPUSER="

@@ -3148,7 +3148,7 @@ char *vget_assign(char *domain, char *dir, int dir_len, uid_t *uid,
   #ifndef SQMAIL_EXT
   snprintf(cdb_file, sizeof(cdb_file), "%s/users/cdb", QMAILDIR);
   #else
-  snprintf(cdb_file, sizeof(cdb_file), "%s/users/assigncdb", QMAILDIR);
+  snprintf(cdb_file, sizeof(cdb_file), "%s/users/assign.cdb", QMAILDIR);
   #endif
 
   /* try to open the cdb file */

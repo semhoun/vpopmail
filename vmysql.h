@@ -250,7 +250,6 @@ alias char(32) NOT NULL, \
 domain char(96) NOT NULL, \
 valias_line text NOT NULL, \
 copy tinyint(1) NOT NULL DEFAULT 0 COMMENT '0=redirect 1=copy&redirect', \
-PRIMARY KEY (alias,domain,valias_type), \
 INDEX (alias, domain)"
 #else
 #define VALIAS_TABLE_LAYOUT "id int(11) PRIMARY KEY AUTO_INCREMENT, \
